@@ -1,1 +1,215 @@
-Hi
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maximise.AI — Shiv Kapil Motwani</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;1,9..144,400&family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --paper: #F5F1E8;
+            --ink: #161412;
+            --muted: #6B6259;
+            --accent: #C44A0A;
+            --rule: #1614121A;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Geist', -apple-system, sans-serif;
+            background: var(--paper);
+            color: var(--ink);
+            line-height: 1.55;
+            font-size: 17px;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 4rem 1.75rem 6rem;
+        }
+
+        header {
+            padding-bottom: 3rem;
+            margin-bottom: 3rem;
+            border-bottom: 1px solid var(--rule);
+        }
+
+        .eyebrow {
+            font-family: 'Geist Mono', monospace;
+            font-size: 0.78rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 1.25rem;
+        }
+
+        h1 {
+            font-family: 'Fraunces', serif;
+            font-weight: 400;
+            font-size: clamp(2.75rem, 6vw, 4rem);
+            letter-spacing: -0.02em;
+            line-height: 1.02;
+            margin-bottom: 1rem;
+        }
+
+        h1 em {
+            font-style: italic;
+            color: var(--accent);
+        }
+
+        .tagline {
+            font-size: 1.15rem;
+            color: var(--muted);
+            max-width: 32ch;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h2 {
+            font-family: 'Geist Mono', monospace;
+            font-size: 0.78rem;
+            font-weight: 500;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--rule);
+        }
+
+        p {
+            margin-bottom: 1rem;
+            max-width: 60ch;
+        }
+
+        p:last-child { margin-bottom: 0; }
+
+        .lead {
+            font-family: 'Fraunces', serif;
+            font-size: 1.35rem;
+            line-height: 1.5;
+            letter-spacing: -0.01em;
+            color: var(--ink);
+        }
+
+        ul.features {
+            list-style: none;
+            counter-reset: feature;
+        }
+
+        ul.features li {
+            counter-increment: feature;
+            padding: 1rem 0;
+            border-bottom: 1px solid var(--rule);
+            display: grid;
+            grid-template-columns: 2.5rem 1fr;
+            gap: 1rem;
+            align-items: baseline;
+        }
+
+        ul.features li:last-child { border-bottom: none; }
+
+        ul.features li::before {
+            content: counter(feature, decimal-leading-zero);
+            font-family: 'Geist Mono', monospace;
+            font-size: 0.85rem;
+            color: var(--accent);
+        }
+
+        .feature-title {
+            font-weight: 500;
+            display: block;
+            margin-bottom: 0.15rem;
+        }
+
+        .feature-desc {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        footer {
+            margin-top: 4rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--rule);
+            font-family: 'Geist Mono', monospace;
+            font-size: 0.78rem;
+            color: var(--muted);
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        a {
+            color: var(--ink);
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 3px;
+        }
+
+        a:hover { color: var(--accent); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <p class="eyebrow">Maximise.AI / 2026</p>
+            <h1>Real-time coaching for the people who <em>build things</em>.</h1>
+            <p class="tagline">A computer-vision platform that guides factory workers in their own language, on their own floor.</p>
+        </header>
+
+        <section>
+            <h2>About</h2>
+            <p class="lead">I'm Shiv Kapil Motwani, a student at Babson College building Maximise.AI — an AI coach that watches assembly work through a standard camera and corrects mistakes the moment they happen, in Hindi.</p>
+            <p>We're piloting on a real production floor in India: my family's manufacturing facility, where I first learned what work actually looks like.</p>
+        </section>
+
+        <section>
+            <h2>What it does</h2>
+            <ul class="features">
+                <li>
+                    <div>
+                        <span class="feature-title">Sees the work</span>
+                        <span class="feature-desc">Multimodal vision watches each step of assembly through standard cameras — no expensive sensors, no rewiring the floor.</span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span class="feature-title">Speaks the language</span>
+                        <span class="feature-desc">Real-time voice guidance in Hindi. Workers stay in flow instead of stopping to read English instructions they didn't write.</span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span class="feature-title">Catches mistakes early</span>
+                        <span class="feature-desc">Defects are flagged on the floor, not at the end of the line — saving rework, scrap, and the worker's morale.</span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span class="feature-title">Surfaces training gaps</span>
+                        <span class="feature-desc">Patterns over time show where the line is struggling, so supervisors can train upstream instead of policing downstream.</span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Why I'm building this</h2>
+            <p>I grew up on the floor of my family's factory. Most workers I knew didn't speak English, and most "AI for manufacturing" tools assume they do. Maximise.AI is built around the people who actually do the work — in the language they actually speak, on the equipment they actually have.</p>
+        </section>
+
+        <footer>
+            <span>© 2026 Shiv Kapil Motwani</span>
+            <span>Babson College · OIM3690</span>
+        </footer>
+    </div>
+</body>
+</html>
